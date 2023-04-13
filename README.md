@@ -28,8 +28,8 @@ This webapp uses a number of open source projects or frameworks to work:
  - PHP
  - MySQL
  - JSON
- -
- ADMIN PAGE
+ 
+ Admin page 
 ![dashboard](https://user-images.githubusercontent.com/46291816/54878635-55316d00-4e55-11e9-9a50-8deb2fc95f60.png)
 # Manage page 
 ![manage user](https://user-images.githubusercontent.com/46291816/54878644-61b5c580-4e55-11e9-8012-69d94b886adb.png)
@@ -45,7 +45,4 @@ This webapp uses a number of open source projects or frameworks to work:
 ![add product](https://user-images.githubusercontent.com/46291816/54878661-7db96700-4e55-11e9-9491-9c4435880d09.png)
 #
 ![Manage Products](https://user-images.githubusercontent.com/46291816/54878662-81e58480-4e55-11e9-85af-d9f457bcee34.png)
-#
-![Info](https://user-images.githubusercontent.com/46291816/54878664-8ad65600-4e55-11e9-8e99-ae05f70b135f.png)
-#
-![profile](https://user-images.githubusercontent.com/46291816/54878666-8dd14680-4e55-11e9-9c7d-00857dc7ec10.png)
+
