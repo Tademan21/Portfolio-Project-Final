@@ -367,4 +367,85 @@
 				e.preventDefault();
 				if($('#category_name').val() == "")
 				{
+					alert('Category is required.');
+				}
+				else
+				{
+					$.ajax({
+						url:"insert_category.php",
+						method:"POST",
+						data:$('#add_form').serialize(),
+						success:function(data)
+						{
+							$('#add_form')[0].reset();
+							$('#AddModal').modal('hide');
+							$('#category_table').html(data);
+						}
+					});
+				}
+			});
+		});
 
+		/* Getting Data as json */
+
+		$(document).on('click','.edit_data',function(){
+			var category_id = $(this).attr('id');
+			$.ajax({
+				url:"update_category.php",
+				method:"POST",
+				data:{category_id:category_id},
+				dataType:"json",
+				success:function(data){
+					$('#category_name_update').val(data.category_name);
+					$('#status_update').val(data.status);
+					$('#category_id').val(category_id);
+					$('#UpdateModal').modal('show');
+				}
+			});
+		});
+
+		/* Updating Data at backend */
+
+		$('#update_form').on('submit', function(e){
+			var category_id = $('#category_id').val();
+			var category_name_update = $('#category_name_update').val();
+			var status_update = $('#status_update').val();
+			e.preventDefault();
+			if($('#category_name_update').val() == "")
+			{
+				alert('Category is required.');
+			}
+			else
+			{
+				$.ajax({
+					url:"update_category_database.php",
+					method:"POST",
+					data: {
+						category_name_update: category_name_update,
+						status_update: status_update,
+						category_id: category_id
+					},
+					success:function(data)
+					{
+						$('#UpdateModal').modal('hide');
+						$('#category_table').html(data);
+					}
+				});
+			}
+		});
+	</script>
+
+	<script>
+		
+		function SearchField() {
+			xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("GET", "category_search.php?search="+document.getElementById('search').value, false);
+			xmlhttp.send(null);
+
+			document.getElementById('display').innerHTML=xmlhttp.responseText;
+      	}
+
+	</script>
+
+</body>
+</html>
