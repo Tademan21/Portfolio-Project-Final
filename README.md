@@ -28,9 +28,10 @@ This webapp uses a number of open source projects or frameworks to work:
  - PHP
  - MySQL
  - JSON
- -ADMIN PAGE
+ -
+ ADMIN PAGE
 ![dashboard](https://user-images.githubusercontent.com/46291816/54878635-55316d00-4e55-11e9-9a50-8deb2fc95f60.png)
-#
+# Manage page 
 ![manage user](https://user-images.githubusercontent.com/46291816/54878644-61b5c580-4e55-11e9-8012-69d94b886adb.png)
 #
 ![groups](https://user-images.githubusercontent.com/46291816/54878649-71cda500-4e55-11e9-9bd1-de213ac1c670.png)
